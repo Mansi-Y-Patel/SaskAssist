@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>
+        Community Verified Safe Zones - SaskAssist
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body class="font-roboto bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="">
+                <div class="">
+                    <div class="flex justify-between items-center space-x-4">
+                        <div>
+                            <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                                <span class="font-bold text-xl">SaskAssist</span>
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href="login.html">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                                Logout
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4 flex-grow">
+        <section class="text-center my-8">
+            <h2 class="text-3xl font-bold mb-4">Welcome to our Emergency Chatbot</h2>
+            <p class="text-lg mb-6">Our chatbot is here to assist you in emergencies. Please use the chat below to get immediate help.</p>
+            <button id="startChatBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Start Chat
+            </button>
+        </section>
+        <section class="my-8">
+            <h3 class="text-2xl font-bold mb-4">How It Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Step 1: User initiates chat" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/2sUst40nNPJrt6EbvcLhkxjTRuR8nS5yP3k1tujQgSU.jpg" width="100" />
+                    <h4 class="text-xl font-bold mb-2">Step 1</h4>
+                    <p>Initiate the chat by clicking the "Start Chat" button.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Step 2: Chatbot asks for details" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/i15sU1kAZ4St7h7AabgEVA3vB6jlQiToiVwh8UzPoAw.jpg" width="100" />
+                    <h4 class="text-xl font-bold mb-2">Step 2</h4>
+                    <p>The chatbot will ask for your details and the nature of the emergency.</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Step 3: Chatbot provides assistance" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/9WGCVYgBc2EgbrMARdTYlpL55AlPrUXSeD6NI8GGQyw.jpg" width="100" />
+                    <h4 class="text-xl font-bold mb-2">Step 3</h4>
+                    <p>Receive immediate assistance based on your input.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <div id="chatPopup" class="chat-popup fixed bottom-0 left-0 mb-4 ml-4 w-80 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="flex justify-between items-center p-4 bg-blue-500 text-white">
+            <div class="flex items-center">
+                <img alt="User profile picture" class="rounded-full mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/i-1q082oaiRPQvViatQOxnLUSVqE2rNvuDcBnCL1epA.jpg" width="40" />
+                <span class="font-bold">Chat with John Doe</span>
+            </div>
+            <button id="closeChatBtn" class="text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col flex-grow p-4 overflow-y-auto">
+        </div>
+        <div class="p-4 bg-gray-200">
+            <div class="flex items-center">
+                <input class="flex-grow p-2 rounded-lg border border-gray-300" placeholder="Type a message..." type="text" />
+                <button class="ml-2 text-blue-500">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        document.getElementById('startChatBtn').addEventListener('onclick', function() {
+            document.getElementById('chatPopup').style.display = 'block';
+        });
+
+        document.getElementById('closeChatBtn').addEventListener('click', function() {
+            document.getElementById('chatPopup').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

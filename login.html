@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>SaskAssist - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-4">
+                    <div>
+                        <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                            <span class="font-bold text-xl">SaskAssist</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h3 class="text-xl font-semibold mb-6 text-center">Login</h3>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Your Password" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="role">Role</label>
+                    <div class="flex items-center">
+                        <input class="mr-2 leading-tight" type="radio" id="user" name="role" value="user">
+                        <label class="text-gray-700" for="user">User</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="mr-2 leading-tight" type="radio" id="volunteer" name="role" value="volunteer">
+                        <label class="text-gray-700" for="volunteer">Volunteer</label>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full" type="button" onclick="redirectToPage()">
+                        Login
+                    </button>
+                </div>
+            </form>
+            <div class="mt-6 text-center">
+                <p class="text-gray-700">New user?</p>
+                <a href="register.html" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full inline-block mt-2">
+                    Register
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            var role = document.querySelector('input[name="role"]:checked');
+            if (role) {
+                if (role.value === "user") {
+                    window.location.href = "user.html"; // Links to user dashboard
+                } else if (role.value === "volunteer") {
+                    window.location.href = "volunteer.html"; // Links to volunteer dashboard
+                }
+            } else {
+                alert("Please select a role before logging in.");
+            }
+        }
+    </script>
+</body>
+</html>

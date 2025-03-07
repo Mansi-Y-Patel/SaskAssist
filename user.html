@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>SaskAssist - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-roboto">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class=" ">
+                <div class="flex justify-between items-center space-x-4">
+                    <div>
+                        <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+                            <span class="font-bold text-xl">SaskAssist</span>
+                        </a>
+                    </div>
+                    <div class="">
+                        <a href="login.html">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                            Logout
+                        </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <div class="w-full max-w-md">
+            <div class="flex flex-col space-y-4">
+                <button id="sos-button"
+                    class="bg-red-500 hover:bg-red-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+                    SOS
+                </button>
+                <button id="cancel-button"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline hidden">
+                    Cancel SOS
+                </button>
+                <div id="volunteer-details" class="mt-8 p-4 bg-white rounded-lg shadow-lg hidden">
+                    <h3 class="text-lg font-semibold mb-2">Volunteer is on the way!</h3>
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Contact Number:</strong> +1 234 567 890</p>
+                </div>
+                <a href="help.html" class="text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+                <button
+                    class="">
+                    Need Help
+                </button></a>
+            </div>
+        </div>
+        <main class="flex flex-col space-y-4 m-5">
+            <!-- Community Verified Safe Zones Section -->
+            <section class="flex flex-col gap-8 md:flex-row items-center bg-white p-4 rounded-lg shadow-md">
+                <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4 md:mb-0 md:mr-4">
+                </i>
+                <div class="flex-1">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">
+                        Community Verified Safe Zones
+                    </h2>
+                    <p class="text-gray-700">
+                        Find safe zones verified by the community for your safety.
+                    </p>
+                </div>
+                <a href="safezones.html">
+                <button class="mt-2 md:mt-0 px-4 py-2 bg-blue-600 text-white rounded-lg">
+                    Find Safe Zones
+                </button></a>
+            </section>
+            <!-- Emergency Chatbot Section -->
+            <!-- Road Conditions Section -->
+            <section class="flex flex-col gap-8 md:flex-row items-center bg-white p-4 rounded-lg shadow-md">
+                <i class="fas fa-road text-4xl text-blue-600 mb-4 md:mb-0 md:mr-4">
+                </i>
+                <div class="flex-1">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">
+                        Road Conditions
+                    </h2>
+                    <p class="text-gray-700">
+                        Check the latest road conditions to plan your travel safely.
+                    </p>
+                </div>
+                <a href="road.html">
+                <button class="mt-2 md:mt-0 px-4 py-2 bg-blue-600 text-white rounded-lg">
+                    View Conditions
+                </button></a>
+            </section>
+            <section class="flex flex-col gap-8 md:flex-row items-center bg-white p-4 rounded-lg shadow-md">
+                <i class="fas fa-robot text-4xl text-blue-600 mb-4 md:mb-0 md:mr-4">
+                </i>
+                <div class="flex-1">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">
+                        Emergency Chatbot
+                    </h2>
+                    <p class="text-gray-700">
+                        Chat with our emergency bot for immediate assistance.
+                    </p>
+                </div>
+                <a href="chatbot.html">
+                <button class="mt-2 md:mt-0 px-4 py-2 bg-blue-600 text-white rounded-lg">
+                    Go to Chatbot
+                </button></a>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.getElementById('sos-button').addEventListener('click', function () {
+            document.getElementById('sos-button').classList.add('hidden');
+            document.getElementById('cancel-button').classList.remove('hidden');
+            document.getElementById('volunteer-details').classList.remove('hidden');
+        });
+
+        document.getElementById('cancel-button').addEventListener('click', function () {
+            document.getElementById('cancel-button').classList.add('hidden');
+            document.getElementById('sos-button').classList.remove('hidden');
+            document.getElementById('volunteer-details').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
